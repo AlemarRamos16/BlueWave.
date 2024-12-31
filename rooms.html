@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Wave Mountain Resort - Rooms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/bluewaveee.png" alt="Blue Wave Mountain Resort Logo" class="logo">
+            <h1>Blue Wave Mountain Resort</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Our Rooms</h2>
+            <div class="room-grid">
+                <div class="room">
+                    <img src="img/room5.jpg" alt="Single Room">
+                    <h3>Fanroom Double</h3>
+                    <p>Cozy and comfortable room perfect for solo travelers.</p>
+                    <button onclick="showBookingForm('Fanroom Double')">Book Now</button>
+                </div>
+                <div class="room">
+                    <img src="img/room2.jpg" alt="Double Room">
+                    <h3>Fanroom for 4 Person</h3>
+                    <p>Spacious room ideal for couples or friends.</p>
+                    <button onclick="showBookingForm('Fanroom for 4 Person')">Book Now</button>
+                </div>
+				<div class="room">
+                    <img src="img/room2.jpg" alt="Double Room">
+                    <h3>Family Room</h3>
+                    <p>Spacious room ideal for couples or friends.</p>
+                    <button onclick="showBookingForm('Family Room')">Book Now</button>
+                </div>
+				<div class="room">
+                    <img src="img/room3.jpg" alt="Double Room">
+                    <h3>Aircon Small</h3>
+                    <p>Spacious room ideal for couples or friends.</p>
+                    <button onclick="showBookingForm('Aircon Small')">Book Now</button>
+                </div>
+                <div class="room">
+                    <img src="img/room4.jpg" alt="Suite">
+                    <h3>Aircon Family Size</h3>
+                    <p>Luxurious suite with stunning mountain views.</p>
+                    <button onclick="showBookingForm('Aircon Family Size')">Book Now</button>
+                </div>
+            </div>
+        </section>
+        <section id="booking" class="section booking-form-container" style="display:none;">
+            <h2>Book a Room</h2>
+            <form id="bookingForm">
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="checkin">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                <div class="input-group">
+                    <label for="checkout">Check-out Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+                <div class="input-group">
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" required>
+                </div>
+                <div class="input-group">
+                    <label for="room-type">Room Type:</label>
+                    <input type="text" id="room-type" name="room-type" readonly>
+                </div>
+                <button type="button" onclick="submitBooking()">Book Now</button>
+            </form>
+            <p id="confirmationMessage" style="color: green; display: none;">Your booking has been confirmed!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blue Wave Mountain Resort. All rights reserved.</p>
+    </footer>
+    <script src="roomm.js"></script>
+</body>
+</html>
